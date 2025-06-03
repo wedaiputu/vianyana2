@@ -1,0 +1,4 @@
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1494.7013746023124!2d115.26696655471845!3d-8.6400240163443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23f0cdc91dac5%3A0xe434c0beccdd3400!2sGriya%20gauri%20sankara%20asram!5e0!3m2!1sid!2sid!4v1736921392513!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+scp -i "key.pem" /Users/wedawiguna/Documents/project/undangan.zip ubuntu@54.206.42.219

@@ -1,0 +1,1108 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Questrial&family=Roboto:wght@100;400;700&family=Sacramento&display=swap");
+
+:root {
+  --colbut: #3e3e3e;
+  --shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  --tangan: "Sacramento", cursive;
+  --biasa: "Questrial", sans-serif;
+  --om: "Kaushan Script", cursive;
+  --allison: 'Allison', Helvetica, Arial, Lucida, sans-serif;
+  --georgia: Georgia, serif;
+  --hitam: #212529;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: var(--biasa);
+  min-height: 100vh;
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Heading h1 sampai h5 pakai Allison */
+h1, h2, h3, h4, h5 {
+  font-family: var(--allison);
+  color: var(--hitam);
+  text-shadow: var(--shadow);
+  margin-bottom: 0.5rem;
+}
+
+/* Kamu bisa sesuaikan ukuran font tiap heading kalau mau */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+
+/* Paragraph pakai Georgia */
+p {
+  font-family: var(--georgia);
+  color: var(--hitam);
+}
+
+.firstSection {
+  background-image: url("https://res.cloudinary.com/dimnv9sq5/image/upload/v1748864836/Untitled_design-2_vnhzp3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; /* juga ganti di sini */
+  padding-top: 40px;
+}
+
+.hero {
+  padding: 0 10px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero main {
+  z-index: 3;
+  color: white;
+}
+
+.second-section {
+  background-image: url("https://res.cloudinary.com/dimnv9sq5/image/upload/v1748866556/ksxnomz3wtglzk7s9hyc.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-section {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourth-section {
+  background-color: #cbcfd2;
+  padding: 50px 20px;
+  color: #fff;
+}
+
+.content-wrapper3 {
+  position: relative;
+  background-color: rgba(6, 5, 5, 0.5);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  opacity: 0.6;
+  animation: fadeIn 1s forwards, slideIn 1s forwards;
+}
+
+.content-wrapper3::before {
+  content: "";
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url("https://res.cloudinary.com/dimnv9sq5/image/upload/v1737005701/HUTANTROPIS-5_eax6z0.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.fifth-section {
+  background-color: #e9ecef; /* abu-abu terang */
+}
+
+.custom-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  .custom-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.undangan {
+  color: #efe9e1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.undangan .custom-icon {
+  margin-right: 8px;
+}
+
+body.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+#hero.lock-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.hero.fly-up {
+  animation: flyUp 1s ease forwards;
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+/* section3 */
+
+#section3 .card {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.8s ease;
+}
+
+#section3.show .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* section 4 */
+
+.section4 {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.section4 .title-container {
+  background-color: #dcdcdc; /* warna latar belakang berbeda */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.section4 .title-container h2 {
+  /* font-family: "Brush Script MT", cursive; */
+  font-size: 1.7rem;
+  margin: 0;
+  color: #333;
+}
+.section4 p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+.section4 .name {
+  font-size: 1.5rem;
+  color: #222;
+}
+.section4 .image-container {
+  margin-top: 1rem;
+}
+.section4 img {
+  width: 250px;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+
+/* section 5 */
+.section5 {
+   background-color: #e9ecef; /* elegant dark background */
+  color: #faeff2;
+  position: relative;
+  padding-top: 1rem;
+  overflow: visible; 
+}
+
+/* Wrapper text + ribbon */
+.ribbon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Text sang mempelai */
+.ribbon-wrapper h2 {
+  margin: 0;
+  color: #e9ecef;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+
+/* Ribbon segitiga */
+.ribbon5 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%; /* tepat di bawah container teks */
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 20px solid #e9ecef; /* warna sesuai background */
+  z-index: 10;
+}
+
+
+
+/* Titles */
+.text-title {
+  font-size: 1.8rem;
+  color: black;
+}
+
+/* Content text */
+.text-content {
+  font-size: 1.1rem;
+  color: black;
+}
+
+/* HR styles */
+.custom-hr-right {
+  border: 1px solid black;
+  width: 40%;
+  margin-left: auto;
+  margin-right: 0;
+}
+.custom-hr-left {
+  border: 1px solid black;
+  width: 40%;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .text-title {
+    text-align: center;
+  }
+  .text-content {
+    text-align: center;
+  }
+  .ribbon5 {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+
+  .custom-hr-right, .custom-hr-left {
+    width: 60%;
+    margin: 1rem auto;
+  }
+}
+
+/* Bridegroom = Pria Section (Putih) */
+.bridegroom-section {
+  background-color: #ffffff;
+  padding: 3rem 0;
+}
+.bridegroom-section .text-title,
+.bridegroom-section .text-content {
+  color: #000000;
+}
+
+/* Bride = Wanita Section (Pink Muda) */
+.bride-section {
+  background-color: #e9ecef;
+  padding: 3rem 0;
+}
+.bride-section .text-title,
+.bride-section .text-content {
+  color: #000000;
+}
+
+/* Photo Styling */
+.photo-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+
+
+/* ini body */
+@media (max-width: 768px) {
+  body {
+    background-position: top;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: -1;
+}
+
+.zoom-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.overlay-container {
+  /* position: relative; */
+  z-index: 2;
+}
+
+.om {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 150px;
+  z-index: 3;
+}
+
+.hero {
+  padding: 10;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero main {
+  z-index: 3;
+  color: rgb(126, 125, 125);
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.undangan {
+  color: #efe9e1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.undangan .custom-icon {
+  margin-right: 8px;
+}
+
+body.lock-scroll {
+  overflow: hidden;
+}
+
+.video {
+  min-height: 100vh;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.hero p,
+.hero h4,
+.hero h6 {
+  text-shadow: var(--shadow);
+  color: #5a5a5a;
+}
+
+.hero h1 {
+  font-family: var(--om);
+  font-size: 3rem;
+  color: var(--colbut);
+}
+
+.hero h4 {
+  font-size: 1.5rem;
+  color: #5a5a5a;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero a {
+  color: #efe9e1;
+  background-color: var(--colbut);
+  box-shadow: var(--shadow);
+}
+
+.undangan {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--colbut);
+  color: #fff;
+  border-radius: 5px;
+  padding: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.custom-icon {
+  font-size: 20px; /* Sesuaikan ukuran ikon */
+  margin-right: 8px; /* Sesuaikan margin antara ikon dan teks */
+  margin-bottom: 5px;
+}
+
+.yth {
+  border-radius: 10px;
+  border: 1px solid #5a5a5a;
+  padding: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color: #3a3a3a;
+}
+
+/* Navbar */
+
+.navbar-brand {
+  font-family: var(--om);
+  font-size: 3rem;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+/* home */
+
+.home {
+  display: flex;
+}
+
+.home .container {
+  /* margin-top: 6rem; */
+}
+
+.home .boxs h3 {
+  font-family: var(--om);
+  color: #574429;
+  font-size: 2rem;
+}
+.home .boxs p {
+  font-family: var(--biasa);
+  color: #3e3e3e;
+}
+
+.boxku {
+  border: 3px solid var(--colbut);
+  padding: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  /* color: black; */
+  background-image: url("https://res.cloudinary.com/dimnv9sq5/image/upload/v1737005701/HUTANTROPIS-5_eax6z0.png");
+  background-size: cover;
+  filter: brightness(0.9);
+}
+
+.boxku h3 {
+  color: #3e3e3e;
+  margin-bottom: 2rem;
+}
+.boxku h1 {
+  font-size: 4rem;
+}
+
+/* acara */
+
+.acara {
+  padding: 150px;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+/* Info */
+
+.info {
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+}
+
+.info a {
+  /* background-color: var(--colbut); */
+}
+
+/* story */
+.story {
+  padding-bottom: 8rem;
+}
+
+.story span {
+  text-transform: uppercase;
+  /* color: white; */
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.story p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.custom-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  /* Larger padding on large screens and above */
+  .custom-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin-top: 6rem;
+  position: relative;
+  /* color: white; */
+}
+
+.timeline::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 1px;
+  background-color: white;
+  left: 50%;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline li::before,
+.timeline li::after {
+  content: "";
+  display: table;
+}
+
+.timeline li::after {
+  clear: both;
+}
+
+.timeline li .timeline-image {
+  width: 160px;
+  height: 160px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 2px solid var(--colbut);
+}
+
+.timeline li .timeline-panel {
+  width: 40%;
+  float: left;
+  padding: 2.5rem;
+  position: relative;
+  border: 2px solid var(--hitam);
+  border-radius: 8px;
+  /* background-color: rgb(68, 67, 67); */
+  background-image: url("https://res.cloudinary.com/dimnv9sq5/image/upload/v1737005701/HUTANTROPIS-5_eax6z0.png");
+}
+
+.timeline li .timeline-panel::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 15px solid transparent;
+  border-left: 15px solid var(--hitam);
+  border-right: 0 solid var(--hitam);
+  border-bottom: 15px solid transparent;
+  top: 80px;
+  right: -15px;
+}
+
+.timeline li .timeline-panel::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 16px solid black;
+  border-right: 0 solid black;
+  border-bottom: 15px solid transparent;
+  top: 81px;
+  right: -13px;
+}
+
+.timeline li.timeline-inverted .timeline-panel {
+  float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel::before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel::after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -12px;
+  right: auto;
+}
+.timeline-heading h3 {
+  color: #c69c6d;
+}
+
+/* galery */
+
+.galery img {
+  width: auto;
+  height: auto;
+}
+
+.gambar-icon-play {
+  position: relative;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px; /* Sesuaikan ukuran ikon */
+  color: #fff; /* Sesuaikan warna ikon */
+  opacity: 0.8; /* Sesuaikan kejelasan ikon */
+  z-index: 1;
+}
+
+.box {
+  padding: 0;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.boxs {
+  padding: 20rem 0;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.container {
+  max-width: 95%;
+}
+
+.foto-awal {
+  /* width: 200px;
+   height: 200px; */
+  border: 2px solid var(--colbut);
+}
+
+.ring {
+  width: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Rasio aspek video 16:9 */
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.warna-btn {
+  background-color: var(--colbut);
+  color: black;
+}
+
+.warna-btn:hover {
+  background-color: #fff;
+}
+
+footer {
+  padding: 3rem;
+  color: #fff;
+  font-size: 15px;
+}
+
+footer svg:hover {
+  color: var(--colbut);
+}
+
+/* audio */
+
+.audio-icon {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  color: white;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  cursor: pointer;
+}
+
+/* countdown */
+.count1 {
+  width: 100%;  
+}
+
+.simply-countdown > div {
+  flex: 1 1 0;      /* kotak flexible, bagi rata */
+  min-width: 0;     /* supaya kotak bisa mengecil */
+  background: #f6f3f3;
+  border-radius: 8px;
+  padding: 8px 6px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: clamp(0.8rem, 3vw, 1.2rem); /* responsive font size */
+}
+
+/* Responsive: HP - 1 kolom */
+@media (max-width: 480px) {
+  .simply-countdown {
+    flex-wrap: wrap;
+    max-width: 100%; /* full lebar di HP */
+  }
+
+  .simply-countdown > div {
+    flex: 0 1 100%; /* 1 kolom penuh */
+  }
+}
+
+
+
+.hari-bahagia-img {
+  width: 80px;
+  margin: 20px;
+}
+
+/* Media Query */
+
+/* Laptop */
+@media (max-width: 3000px) {
+  html {
+    font-size: 100%;
+  }
+  .foto-awal {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1150px) {
+  html {
+    font-size: 80%;
+  }
+  .story {
+    padding: 0;
+  }
+
+  .video {
+    min-height: 100vh;
+  }
+  .foto-awal {
+    width: 250px;
+    height: 250px;
+  }
+  .boxs {
+    padding: 15rem 0;
+    text-align: center;
+  }
+  .audio-icon {
+    position: fixed;
+    font-size: 4rem;
+    bottom: 2rem;
+    right: 2rem;
+  }
+  .boxku {
+    padding: 0;
+    margin: 10px 0px;
+    text-align: center;
+    /* background-image: url('https://res.cloudinary.com/dimnv9sq5/image/upload/v1736929847/HUTANTROPIS-12_m43nvw.png'); */
+  }
+
+  .boxku h1,
+  .boxku h4 {
+    color: black; /* Adjust text color as needed */
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+  }
+
+  /* Hp */
+  @media (max-width: 900px) {
+    html {
+      font-size: 60%;
+    }
+    .boxs {
+      padding: 5rem 0;
+    }
+
+    .video {
+      min-height: 100vh;
+    }
+    .custom-icon {
+      font-size: 15px;
+      margin-top: 2px;
+    }
+    .galery .container {
+      padding-top: 3rem;
+    }
+    .story {
+      padding-bottom: 2rem;
+    }
+    .sticky-top {
+      overflow: hidden;
+    }
+    .foto-awal {
+      width: 200px;
+      height: 200px;
+    }
+    .boxs {
+      padding: 15rem 0;
+      text-align: center;
+    }
+    .timeline::before {
+      left: 50px;
+    }
+
+    .timeline li .timeline-image {
+      left: 10px;
+      margin-left: 45px;
+      top: 16px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .timeline li .timeline-panel {
+      width: calc(100% - 130px);
+      float: right;
+    }
+
+    .timeline li .timeline-panel::before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto;
+    }
+
+    .timeline li .timeline-panel::after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -13px;
+      right: auto;
+    }
+    .audio-icon {
+      position: fixed;
+      left: 50%;
+      bottom: 4%;
+      font-size: 4rem;
+      transform: translate(-50%, -50%);
+    }
+    .acara {
+      padding: 10px;
+      padding-top: 50px;
+      justify-content: center;
+    }
+
+    .boxku {
+      padding: 0;
+      margin: 20px 0px;
+      text-align: center;
+    }
+
+    .boxku h1,
+    .boxku h2,
+    .boxku h4 {
+      color: black; /* Adjust text color as needed */
+      text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+        1px 1px 0 white;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .boxs {
+      padding: 1rem;
+      text-align: center;
+    }
+    .foto-awal {
+      width: 200px;
+      height: 200px;
+    }
+    .timeline::before {
+      left: 50px;
+    }
+
+    .timeline li .timeline-image {
+      left: 10px;
+      margin-left: 45px;
+      top: 16px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .timeline li .timeline-panel {
+      width: calc(100% - 130px);
+      float: right;
+    }
+
+    .timeline li .timeline-panel::before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto;
+    }
+
+    .timeline li .timeline-panel::after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -13px;
+      right: auto;
+    }
+    .acara {
+      padding: 10px;
+      padding-top: 50px;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .timeline::before {
+      left: 50px;
+    }
+
+    .timeline li .timeline-image {
+      left: 10px;
+      margin-left: 45px;
+      top: 16px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .timeline li .timeline-panel {
+      width: calc(100% - 130px);
+      float: right;
+    }
+
+    .timeline li .timeline-panel::before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto;
+    }
+
+    .timeline li .timeline-panel::after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -13px;
+      right: auto;
+    }
+    .acara {
+      padding: 10px;
+      padding-top: 50px;
+      justify-content: center;
+    }
+  }
+}

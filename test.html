@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layout Judul</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #ffffff;
+    }
+
+    .header {
+      background-color: #8a8f8b;
+      padding: 40px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .ribbon {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #a3ceaa;
+      padding: 10px 20px;
+      clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%);
+    }
+
+    .section {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 20px;
+      background-color: #a99f9f;
+    }
+
+    .box {
+      background-color: #ccc7c7;
+      padding: 50px;
+      flex: 1;
+      border-radius: 30px;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="ribbon"><h1>Judul</h1></div>
+  </div>
+
+  <div class="section">
+    <div class="box">Teks</div>
+    <div class="box">Photo</div>
+  </div>
+
+  <div class="section">
+    <div class="box">Photo</div>
+    <div class="box">Teks</div>
+  </div>
+
+</body>
+</html>
