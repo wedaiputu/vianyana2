@@ -530,12 +530,12 @@ body.lock-scroll {
 }
 
 .yth {
-  border-radius: 10px;
-  border: 1px solid #5a5a5a;
-  padding: 20px;
+  /* border-radius: 10px; */
+  /* border: 1px solid #5a5a5a; */
+  padding: 10px;
   margin-bottom: 10px;
   display: inline-block;
-  background-color: #3a3a3a;
+  /* background-color: #3a3a3a; */
 }
 
 /* Navbar */
